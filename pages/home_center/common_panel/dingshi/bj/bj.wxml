@@ -1,0 +1,50 @@
+<view class="tj">
+   <text>重复</text> 
+
+   <view class="checkbox">
+   <checkbox-group bindchange="checkboxChange" >
+      <checkbox value='0' checked="{{loops/1000000 >=1}}" >周日</checkbox>
+      <checkbox value='1' checked="{{loops%1000000/100000 >=1}}" >周一</checkbox>
+      <checkbox value='2' checked="{{loops%100000/10000 >=1}}" >周二</checkbox>
+      <checkbox value='3' checked="{{loops%10000/1000 >=1}}">周三</checkbox>
+      <checkbox value='4' checked="{{loops%1000/100 >=1}}">周四</checkbox>
+      <checkbox value='5' checked="{{loops%100/10 >=1}}">周五</checkbox>
+      <checkbox value='6' checked="{{loops%10 >=1}}">周六</checkbox>
+   </checkbox-group>
+   </view>
+</view>
+
+
+<picker mode="date" value="{{date}}" start="{{nowdate.date1}}" bindchange="bindDateChange">
+<view class="tj" wx:if="{{loops==0}}" >
+<text>日期</text> 
+<view>
+<text decode="true">{{date}}</text>
+
+   <text decode="true">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</text>
+</view>
+</view> 
+</picker>
+<picker mode="time" value="{{time}}" start="{{nowdate.time1}}" bindchange="bindTimeChange">
+<view class="tj">
+<text>时间</text> 
+<view>
+   <text>{{time}}</text>
+   <text decode="true">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</text>
+</view>
+</view> 
+</picker>
+
+<view class="tj" bindtap="turnDeviceOn">
+ <text>开关</text> <text>{{ value ? '打开' : '关闭'}}<text decode="true">&nbsp;&nbsp; &gt;&nbsp;&nbsp;</text></text>  
+</view>
+<view class="bz">
+ <text>备注</text> 
+  
+  <textarea bindinput="bindKeyInput"  value="{{alias_name}}" class="textarea" />
+</view>
+
+<view class="dibu"> 
+   <view class="button" bindtap="edit">确 定</view>
+</view>
+

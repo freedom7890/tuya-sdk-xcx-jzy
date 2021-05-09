@@ -1,0 +1,41 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "common_panel",
+          "pathName": "pages/home_center/common_panel/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home_center/common_panel/dianliang/dianliang",
+          "pathName": "pages/home_center/common_panel/dianliang/dianliang",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home_center/device_manage/index",
+          "pathName": "pages/home_center/device_manage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home_center/common_panel/dingshi/dingshi",
+          "pathName": "pages/home_center/common_panel/dingshi/dingshi",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

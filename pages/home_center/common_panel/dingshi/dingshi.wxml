@@ -1,0 +1,40 @@
+
+<!-- <image class="common-panel-backgroud" src="/image/forest@2x.png" /> -->
+<scroll-view scroll-y="true" style="height: 1000rpx;" >
+<view wx:for="{{groups}}"  wx:for-item="list" class="for" > 
+  
+  <view class="list1" bindlongpress="delete" data-index="{{index}}">
+    <navigator url="/pages/home_center/common_panel/dingshi/bj/bj?date={{groups[index].timers[0].date}}&value={{groups[index].timers[0].functions[0].value}}&loops={{groups[index].timers[0].loops}}&time={{groups[index].timers[0].time}}&id={{groups[index].id}}&device_id={{device_id}}&alias_name={{groups[index].timers[0].alias_name}}">
+    <view class="list"  >
+      <view>{{list.timers[0].time}}</view>
+      <view class="day">
+        <text wx:if="{{list.timers[0].loops/1000000 >=1}}" decode='true'>周日&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%1000000/100000 >=1}}" decode='true'>周一&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%100000/10000 >=1}}" decode='true'>周二&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%10000/1000 >=1}}" decode='true'>周三&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%1000/100 >=1}}" decode='true'>周四&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%100/10 >=1}}" decode='true'>周五&nbsp; </text>
+        <text wx:if="{{list.timers[0].loops%10 >=1}}" decode='true'>周六&nbsp; </text>
+      
+        <text wx:if="{{list.timers[0].loops==0}}" >仅限一天</text>
+      </view>
+   
+      <view class="day">开关:{{list.timers[0].functions[0].value? '打开' : '关闭'}}</view>
+    </view>
+  </navigator>
+    <switch checked="{{list.timers[0].status}}" bindchange="switch{{index}}Change"/>
+  </view>
+  
+</view>
+</scroll-view>
+  
+
+
+
+
+
+<view class="dibu">
+  <navigator url="/pages/home_center/common_panel/dingshi/tj/tj?device_id={{device_id}}">
+   <view class="button">添 加 定 时</view>
+  </navigator>
+</view>

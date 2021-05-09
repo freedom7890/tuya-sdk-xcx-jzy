@@ -1,0 +1,61 @@
+.tj{
+  display: flex;
+  width: 660rpx;
+  height: 100rpx;
+  margin-top:10rpx ;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  background-color: #ffffff;
+  border-radius:15rpx;
+  padding: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dibu{
+  position: relative;
+  bottom: 0rpx;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+ 
+}
+.button{
+  width: 400rpx;
+  height: 70rpx;
+  background-color:#ffffff;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+ 
+  border-radius:15rpx;
+  margin-top:20rpx;
+}
+
+.checkbox{
+  display: flex;
+  width: 520rpx;
+  height: 100rpx;
+}
+.bz{
+  display: flex;
+  flex-direction: column;
+  width: 660rpx;
+  height: 300rpx;
+  margin-top:10rpx ;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  background-color: #ffffff;
+  border-radius:15rpx;
+  padding: 20rpx;
+  justify-content: left;
+  
+}
+.textarea{
+  width: 660rpx;
+  height: 350rpx;
+  background: #ece9e9;
+  
+  margin-top:10rpx ;
+}

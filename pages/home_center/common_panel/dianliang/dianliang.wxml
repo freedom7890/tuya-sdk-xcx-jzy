@@ -1,0 +1,43 @@
+
+<image class="common-panel-backgroud" src="/image/forest@2x.png" />
+<view class="tit_jrdl">
+  <view  >今日电量</view>
+  <view class="jrdl">{{All.thisDay}}<text  style="font-size:40rpx">KWh</text></view>
+  
+</view>
+
+
+<view class="zdl">总电量 {{All.sum}}<text class="kwh">KWh</text></view>
+
+<view class="year">
+   <text  decode='true' bindtap="yearf"> &lt;-&nbsp;&nbsp;</text>
+   <text>{{nowdate.year}}</text>
+   <text decode='true' bindtap="yearn"> &nbsp;&nbsp;+&gt; </text>
+</view>
+<view wx:if="{{!flag}}" class="months" >
+   <view wx:for="{{Month.months}}" wx:for-index="idx" >
+      <view wx:if="{{item !=0}}" class="month" bindtap="day" data-item="{{idx}}">
+   
+        <text decode='true'>{{idx}} &nbsp;&nbsp;&nbsp;&nbsp;{{item}}<text class="kwh" >KWh</text></text>
+        <text decode='true'>&gt;&nbsp;&nbsp;</text>
+      </view>
+  </view>
+</view>
+<view  wx:if="{{flag}}" class="months">
+         <view wx:for="{{days}}" class="day">
+          <view wx:if="{{item!=0}}" class="month" bindtap="back">   
+            <text decode='true'>{{index}} &nbsp;&nbsp;{{item}}KWh</text>
+           
+            <text decode='true' >&lt;&nbsp;&nbsp;</text>
+          </view>
+         </view>
+ </view>
+ 
+  
+
+
+<!-- <view class="line"></view> -->
+
+
+
+

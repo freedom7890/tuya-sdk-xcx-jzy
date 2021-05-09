@@ -1,0 +1,66 @@
+<wxs src="./index.wxs" module="utils" />
+<image class="common-panel-backgroud" src="/image/forest@2x.png" />
+<navbar device_name="{{device_name}}" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
+
+
+ 
+<view class="common-panel-header">
+  <view class="common-panel-header-block">
+    <image class="top_image" src="{{rwDpList['switch']['value'] ? '/image/dcOn.png' : '/image/dcOff.png'}}" bindtap="turnDeviceOn"></image>
+    <view class="top_content_on" wx:if="{{rwDpList['switch']['value']}}" >插座已开启</view>
+    <view class="top_content_off" wx:else >插座已关闭</view>
+    
+  </view>
+</view>
+
+<block wx:if="{{isRoDpListShow}}">
+  <view class="statuslist">
+    
+      <view class="roDpItem-normal">
+        <view class="roDpItem-dpName">电流</view>
+        <view class="roDpItem-status">{{roDpList['cur_current']['value']}}mA</view>
+      </view>
+      <view class="roDpItem-normal">
+        <view class="roDpItem-dpName">功率</view>
+        <view class="roDpItem-status">{{roDpList['cur_power']['value']/10}}W</view>
+      </view>     
+      <view class="roDpItem-normal">
+        <view class="roDpItem-dpName">电压</view>
+        <view class="roDpItem-status">{{roDpList['cur_voltage']['value']/10}}V</view>
+      </view>
+  </view>
+</block>
+
+
+
+<!-- 底部 按钮-->
+
+<view class='bottom_col'>
+	<view class='bottom_block'>
+		<image class="bottom_image" src="{{rwDpList['switch']['value'] ? '/image/kg2.png' : '/image/kg1.png'}}" bindtap="turnDeviceOn"></image>
+    <view wx:if="{{rwDpList['switch']['value']}}" >开关</view>
+    <view wx:else style="color:#8a8a8a" >开关</view>
+	</view>
+	<view class='bottom_block'>
+<!-- 		<image class="bottom_image" src='/image/djs2.png'></image> -->
+    <picker mode="time" value="{{time}}"  bindchange="bindTimeChange">
+
+      <text class="djs" wx:if="{{time!='00:00'}}"> {{time}}</text>
+      <text class="djs1" wx:else > {{time}}</text>
+      <view wx:if="{{time!='00:00'}}" >倒计时</view>  
+      <view wx:else style="color:#8a8a8a" >倒计时</view>
+    </picker>   
+	</view>
+	<view class='bottom_block'>
+    <navigator url="/pages/home_center/common_panel/dingshi/dingshi?device_id={{device_id}}">
+      <image class="bottom_image" src='/image/ds2.png'></image>
+      <view>定时</view>
+    </navigator>
+  </view>
+  <view class='bottom_block'>
+    <navigator url="/pages/home_center/common_panel/dianliang/dianliang?device_id={{device_id}}">
+      <image class="bottom_image" src='/image/dl2.png'></image>
+      <view>电量</view>
+    </navigator>
+	</view>
+</view> 

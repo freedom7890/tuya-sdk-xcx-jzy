@@ -1,0 +1,237 @@
+/* miniprogram/pages/home_center/common_panel/index.js.wxss */
+
+.common-panel-backgroud {
+  position: absolute;
+  
+  width: 100%;
+	height: 100%;
+	background-color:rgba(27, 83, 65);
+}
+
+
+.common-panel-header {
+  margin-top: 50rpx;
+  z-index: 1;
+  width: 100%;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.common-panel-header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.common-panel-header-dpName {
+	width: 160px;
+  height: 25px;
+  text-align: center;
+	font-family: HelveticaNeue;
+	font-size: 12px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+	color: #fff;
+}
+
+.common-panel-header-dpValue {
+	width: 114px;
+	height: 75px;
+  font-family: DINCondensed-Bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+	font-size: 24px;
+	color: #fff;
+}
+
+.roDpItem-normal {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 54px;
+  padding: 16px 2px;
+}
+
+.roDpItem-normal:not(:last-child) {
+  border-right: solid 2px #1afa29;
+}
+
+.roDpItem-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 54px;
+  padding: 16px 33px;
+}
+
+.roDpItem-two:not(:last-child) {
+  border-right: solid 2px #1afa29;
+}
+
+.roDpItem-one {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 64px;
+  padding: 20px 24px;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+.roDpItem-dpName {
+  flex: 1;
+  width: 200rpx;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1afa29;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.roDpItem-status {
+  width: 230rpx;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1afa29;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.statuslist {
+  z-index: 1;
+  margin-top:30rpx;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  line-height: 12px;
+  flex-wrap: wrap;
+}
+
+.scroll-view {
+
+  z-index: 1;
+  padding: 16px 8px;
+  width: auto;
+  height: 100%;
+}
+
+
+
+/*顶部 大图标*/
+.top_col {
+  overflow: hidden;
+  
+  width: 100%;
+  position: fixed;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.top_image {
+  display: flex;
+  margin-top: 0rpx;
+  width: 400rpx;
+  height: 400rpx;
+  justify-content: center;
+  
+}
+
+.top_content_on{
+  display: flex;
+  color: #1afa29;
+  font-size:50rpx;
+  justify-content: center;
+  
+}
+.top_content_off{
+  display: flex;
+  color: #8a8a8a;
+  font-size:50rpx;
+  justify-content: center;
+  
+}
+/*中间 电压 功率 电流*/
+.center_col {
+  overflow: hidden;
+  position: fixed;
+  left:130rpx;
+  right:130rpx;
+  position: fixed;
+  top: 850rpx;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+.center_block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  justify-content: center;
+  font-size:20px;
+  color: #1afa29;
+  
+}
+
+/* 底部 按钮 */
+.bottom_col {
+   overflow: hidden;
+  margin-bottom: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 90rpx;
+  display: flex;
+  justify-content: center; 
+}
+
+.bottom_block {
+  display: flex;
+  flex-direction: column;
+  width: 130rpx;
+  align-items: center;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  color: #1afa29;
+  font-size:20px;
+}
+
+.bottom_image {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.djs{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+ font-size:40rpx;
+ justify-content: center; 
+}
+.djs1{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+ font-size:40rpx;
+ justify-content: center; 
+ color: #8a8a8a;
+}

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/guide/index",
+    "pages/home_center/device_list/index",
+    "pages/home_center/device_manage/index",
+    "pages/home_center/common_panel/index",
+    "pages/home_center/common_panel/dianliang/dianliang",
+    "pages/home_center/common_panel/dingshi/dingshi",
+    "pages/home_center/common_panel/dingshi/tj/tj",
+    "pages/home_center/common_panel/dingshi/bj/bj",
+    "pages/cloud_check/index",
+    "pages/function_center/device_connect/index",
+    "pages/web_view/index",
+    "pages/base_function/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "plugins": {
+    "tuya-ap-plugin": {
+      "version": "3.3.9",
+      "provider": "wxd2aa51ffacc3ff86"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

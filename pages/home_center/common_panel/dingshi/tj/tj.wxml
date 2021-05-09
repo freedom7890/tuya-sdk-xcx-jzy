@@ -1,0 +1,60 @@
+<view class="tj">
+   <text>重复</text> 
+<!--    <view>
+       
+        <text wx:if="{{loops/1000000 >=1}}" decode='true'>周日&nbsp; </text>
+        <text wx:if="{{loops%1000000/100000 >=1}}" decode='true'>周一&nbsp; </text>
+        <text wx:if="{{loops%100000/10000 >=1}}" decode='true'>周二&nbsp; </text>
+        <text wx:if="{{loops%10000/1000 >=1}}" decode='true'>周三&nbsp; </text>
+        <text wx:if="{{loops%1000/100 >=1}}" decode='true'>周四&nbsp; </text>
+        <text wx:if="{{loops%100/10 >=1}}" decode='true'>周五&nbsp; </text>
+        <text wx:if="{{loops%10 >=1}}" decode='true'>周六&nbsp; </text>
+        <text wx:if="{{loops==0}}">仅限一次</text>
+        <text decode="true">&nbsp;&nbsp; &gt;&nbsp;&nbsp;</text>
+   </view> -->
+   <view class="checkbox">
+   <checkbox-group bindchange="checkboxChange" >
+      <checkbox value='0'>周日</checkbox>
+      <checkbox value='1'>周一</checkbox>
+      <checkbox value='2'>周二</checkbox>
+      <checkbox value='3'>周三</checkbox>
+      <checkbox value='4'>周四</checkbox>
+      <checkbox value='5'>周五</checkbox>
+      <checkbox value='6'>周六</checkbox>
+   </checkbox-group>
+   </view>
+</view>
+
+
+<picker mode="date" value="{{instruct[0].date}}" start="{{nowdate.date1}}" bindchange="bindDateChange">
+<view class="tj" wx:if="{{loops==0}}" >
+<text>日期</text> 
+<view>
+<text decode="true">{{instruct[0].date}}</text>
+
+   <text decode="true">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</text>
+</view>
+</view> 
+</picker>
+<picker mode="time" value="{{instruct[0].time}}" start="{{nowdate.time1}}" bindchange="bindTimeChange">
+<view class="tj">
+<text>时间</text> 
+<view>
+   <text>{{instruct[0].time}}</text>
+   <text decode="true">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</text>
+</view>
+</view> 
+</picker>
+
+<view class="tj" bindtap="turnDeviceOn">
+ <text>开关</text> <text>{{instruct[0].functions[0].value? '打开' : '关闭'}}<text decode="true">&nbsp;&nbsp; &gt;&nbsp;&nbsp;</text></text>  
+</view>
+<view class="bz">
+ <text>备注</text> 
+  
+  <textarea bindinput="bindKeyInput"  value="{{alias_name}}" class="textarea" />
+</view>
+
+<view class="dibu"> 
+   <view class="button" bindtap="addtime">确 定</view>
+</view>
